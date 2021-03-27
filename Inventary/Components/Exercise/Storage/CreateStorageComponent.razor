@@ -1,0 +1,67 @@
+﻿@using Entities
+@using Business
+
+<div>
+    <EditForm Model="OStorage">
+        <div class="form-group">
+            <label> Bodegas: </label>
+            <InputSelect @bind-Value="OStorage.WareHousesId" class="form-control">
+                <option value=""> Seleccione una Bodega.. </option>
+                @foreach (var wareHouses in WareHouses)
+                {
+                    <option value="@wareHouses.WareHousesId"> @wareHouses.WareHousesName </option>
+                }
+            </InputSelect>
+        </div>
+        <div class="form-group">
+            <label> Productos: </label>
+            <InputSelect @bind-Value="OStorage.ProductId" class="form-control">
+                <option value=""> Seleccione una Bodega.. </option>
+                @foreach (var product in Products)
+                {
+                    <option value="@product.ProductId"> @product.ProductName </option>
+                }
+            </InputSelect>
+        </div>
+        <div class="form-group" >
+            <label>Referencia:</label>
+            <InputText @bind-Value="OStorage.StorageId" class="form-control"/>
+        </div>
+        <input type="button" class="btn btn-primary" value="Crear Almacen" @onclick="SaveStorage" />
+    </EditForm>
+    <div class="text-center h4">
+        @message
+    </div>
+</div>
+
+@code {
+
+    string message = "";
+
+    StorageEntity OStorage = new StorageEntity();
+    List<WareHousesEntity> WareHouses = new List<WareHousesEntity>();
+    List<ProductEntity> Products = new List<ProductEntity>();
+
+    private void SaveStorage()
+    {
+        
+        if (!B_Storage.IsProductsInWareHouses(OStorage.ProductId))
+        {
+            B_Storage.CretateStorage(OStorage);
+            OStorage.LastUpdate = DateTime.Now;
+
+            message = "Producto Almacenado";
+        }
+        else
+        {
+            message = "Producto ya Registrado";
+        }
+
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        WareHouses = B_WareHouses.WareHousesList();
+        Products = B_Productcs.ProductsList();
+    }
+}

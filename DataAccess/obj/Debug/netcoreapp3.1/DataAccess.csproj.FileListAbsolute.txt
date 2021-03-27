@@ -1,0 +1,15 @@
+C:\Users\yenny\Desktop\Cursos De PLATZI\Blazor And .Net\DataAccess\bin\Debug\netcoreapp3.1\Entities.dll
+C:\Users\yenny\Desktop\Cursos De PLATZI\Blazor And .Net\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csprojAssemblyReference.cache
+C:\Users\yenny\Desktop\Cursos De PLATZI\Blazor And .Net\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.AssemblyInfoInputs.cache
+C:\Users\yenny\Desktop\Cursos De PLATZI\Blazor And .Net\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.AssemblyInfo.cs
+C:\Users\yenny\Desktop\Cursos De PLATZI\Blazor And .Net\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.deps.json
+C:\Users\yenny\Desktop\Cursos De PLATZI\Blazor And .Net\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.dll
+C:\Users\yenny\Desktop\Cursos De PLATZI\Blazor And .Net\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.pdb
+C:\Users\yenny\Desktop\Cursos De PLATZI\Blazor And .Net\DataAccess\bin\Debug\netcoreapp3.1\Entities.pdb
+C:\Users\yenny\Desktop\Cursos De PLATZI\Blazor And .Net\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\yenny\Desktop\Cursos De PLATZI\Blazor And .Net\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.CopyComplete
+C:\Users\yenny\Desktop\Cursos De PLATZI\Blazor And .Net\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.dll
+C:\Users\yenny\Desktop\Cursos De PLATZI\Blazor And .Net\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.pdb
+C:\Users\yenny\Desktop\Cursos De PLATZI\Blazor And .Net\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.runtimeconfig.json
+C:\Users\yenny\Desktop\Cursos De PLATZI\Blazor And .Net\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.runtimeconfig.dev.json
+C:\Users\yenny\Desktop\Cursos De PLATZI\Blazor And .Net\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.genruntimeconfig.cache

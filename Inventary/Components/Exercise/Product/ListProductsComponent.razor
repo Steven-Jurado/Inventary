@@ -1,0 +1,59 @@
+﻿@using Entities
+@using Business
+
+<hr />
+<select class="form-control" @onchange="CategoryChanges">
+    <option value=""> Seleccione Categoria... </option>
+    @foreach (var categoies in Categories)
+    {
+        <option value="@categoies.CategoryId"> @categoies.CategoryName </option>
+    }
+</select>
+<hr />
+
+<table class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th> Referencias</th>
+            <th> Nombre</th>
+            <th> Categorias</th>
+            <th> Cantidad</th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in TempProducts)
+        {
+            <tr>
+                <td>@product.ProductId </td>
+                <td>@product.ProductName </td>
+                <td>@product.CategoryId </td>
+                <td>@product.TotalQuantity </td>
+                <td><a href="update/product/@product.ProductId" > Actualizar</a> </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@message
+@code {
+
+    string message = "";
+
+    List<ProductEntity> Products = new List<ProductEntity>();
+    List<ProductEntity> TempProducts = new List<ProductEntity>();
+    List<CategoryEntity> Categories = new List<CategoryEntity>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Products = B_Productcs.ProductsList();
+        TempProducts = Products;
+        Categories = B_Category.CategoryList();
+    }
+
+    private void CategoryChanges(ChangeEventArgs eventArgs)
+    {
+        //message = eventArgs.Value.ToString();
+        TempProducts = Products.Where(c => c.CategoryId == eventArgs.Value.ToString()).ToList();
+    }
+}

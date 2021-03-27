@@ -1,0 +1,35 @@
+﻿@using Entities
+@using Business
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th> Referencias </th>
+                <th> Bodegas </th>
+                <th> Productos </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                @foreach (var storage in Storages)
+                {
+                    <td> @storage.StorageId</td>
+                }
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+@code {
+
+    StorageEntity OStprage = new StorageEntity();
+    List<StorageEntity> Storages = new List<StorageEntity>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Storages = B_Storage.StoragesList();
+    }
+
+}
